@@ -1,8 +1,5 @@
-## 常用的Markdown操作  
+## Markdown操作  
 
-**- 粗体**  
-文本两端加**或__
-   
 **- 标题**  
 文本前边加\# 或者在下边加==或-  
 *注： # 后要跟空格，以便正确显示*
@@ -11,6 +8,9 @@
 
 This is an H2
 --------  
+
+**- 粗体**  
+文本两端加**或__
 
 **- 分隔线**  
 使用3个以上的星号，减号，底线  
@@ -44,12 +44,6 @@ This is [an example](http://example.com/ "Title") inline link.
 
 若多行，则文本两端各加三个单引号'''  
 
-**- 任务复选框**  
-使用- [x] 和- [ ] 来  
-
-- [ ] This is a complete item
-- [x] This is a todo item  
-
 **- 列表**  
 
 First Header | Second Header
@@ -57,6 +51,20 @@ First Header | Second Header
 Content from cell 1 | Content from cell 2
 Content in the first column | Content in the second column  
 *注： MarkdownPad2未正确显示*
+
+## Write on Github
+
+**- 删除线**  
+~~I Hate PYTHON~~
+
+**- 任务复选框**  
+使用- [x] 和- [ ] 来  
+
+- [ ] This is a complete item
+- [x] This is a todo item  
+
+**- @某人或Issue**  
+使用@或#来实现，例如@draachen, # 151  
 
 **- emoji**  
 :sparkles:  
@@ -74,12 +82,13 @@ HTML区块标签间的Markdown格式语法不会被处理
     </tr>
 </table>  
 
-<br />
-
 ### Changelog  
 
-- 2017/8/27 11:29:07 init
+- 2017/8/28 23:42:36 新增Write on Github
+- 2017/8/27 11:29:07 创建
 
 参考资料：  
 
-- [Markdown语法说明（简体中文版）](http://wowubuntu.com/markdown/)
+- [Markdown语法说明（简体中文版）](http://wowubuntu.com/markdown/)  
+- [
+Writing on GitHub / Basic writing and formatting syntax ](https://help.github.com/articles/basic-writing-and-formatting-syntax/)  

@@ -1,4 +1,4 @@
-### Gitbook简明教程
+## Gitbook简明教程
 
 配置GitBook  
 配置Disqus  

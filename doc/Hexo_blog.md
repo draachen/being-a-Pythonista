@@ -1,4 +1,4 @@
-### Hexo搭建博客  
+## Hexo搭建博客  
 
 博客地址：[draachen.github.io](draachen.github.io)
 
