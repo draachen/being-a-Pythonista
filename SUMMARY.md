@@ -13,3 +13,4 @@
     * [Tkinter package](doc/Tkinter_package.md)  
     * [Cloud deployment](doc/Cloud_deployment.md)  
     * [Wechat development](doc/Wechat_development.md)  
+    * [Hexo blog](doc/Hexo_blog.md)  

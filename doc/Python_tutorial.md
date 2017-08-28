@@ -3,7 +3,9 @@
 索引
 
 - 脚本声明  
-- IO操作
+- 字符串  
+- 列表  
+- IO操作  
 
 ---
 
@@ -13,6 +15,32 @@
 
     #! python3  
     # -*- coding: utf-8 -*-
+
+### 字符串  
+
+字符串分解为字典  
+
+    list.split('，')或者list.index('，')  
+
+json中取值  
+
+    import json  
+    text = json.loads(rtn) # rtn 为 API 返回的数据  
+    temperature = text['results'][0]['now']['temperature']  
+
+格式化输出  
+
+    print('i like %s' % a )  
+    print('i like %{}'.format(a))  
+
+### 列表  
+
+将列表转换为字典  
+
+    > a = ['a', 'b']  
+    > data.update({list[0]:list[1]})  
+    > data  
+    {'a': 'b'}  
 
 ### IO操作  
 
@@ -34,6 +62,7 @@
 
 ### Changelog  
 
+- 2017/8/28 22:01:16 增补字符串，列表内容
 - 2017/8/27 14:06:52 init  
 
 参考资料  
