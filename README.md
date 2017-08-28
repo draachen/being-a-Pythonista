@@ -2,14 +2,13 @@
 
 self learning tutorial
 
+## Introduction  
+Include all necessary coding tutorial summarized by me.
 
-## introduction  
-this is my own tutorial, include all necessary coding tutorial summarized by me.
+## Catalog  
 
+[> link](SUMMARY.md)  
 
-## catalog  
-
-
-## about  
+## Liscense  
 
 ©2017 draachen
