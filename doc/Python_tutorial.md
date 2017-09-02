@@ -10,6 +10,7 @@
 - 高级特征  
 - 函数式编程  
 - IO操作  
+- Web开发  
 
 ---
 
@@ -197,8 +198,193 @@ filter
     > f.write('Hello World!')  
     >f.close()  #文件打开后记得关闭  
 
+### Web开发  
+
+**HTTP协议**  
+**HTML**：定义了页面的内容  
+
+    <html>
+    <head>
+      <title>Hello</title>
+    </head>
+    <body>
+      <h1>Hello, world!</h1>
+    </body>
+    </html>
+
+CSS（层叠样式表）：控制页面元素的样式  
+
+    <html>
+    <head>
+      <title>Hello</title>
+      <style>
+        h1 {
+          color: #333333;
+          font-size: 48px;
+          text-shadow: 3px 3px 3px #666666;
+        }
+      </style>
+    </head>
+    <body>
+      <h1>Hello, world!</h1>
+    </body>
+    </html>
+
+Javascript：负责页面的交互逻辑  
+
+    <html>
+    <head>
+      <title>Hello</title>
+      <style>
+        h1 {
+          color: #333333;
+          font-size: 48px;
+          text-shadow: 3px 3px 3px #666666;
+        }
+      </style>
+      <script>
+        function change() {
+          document.getElementsByTagName('h1')[0].style.color = '#ff0000';
+        }
+      </script>
+    </head>
+    <body>
+      <h1 onclick="change()">Hello, world!</h1>
+    </body>
+    </html>
+
+**WSGI接口**  
+
+web应用的本质：
+
+    浏览器发送一个HTTP请求；
+
+    服务器收到请求，生成一个HTML文档；
+
+    服务器把HTML文档作为HTTP响应的Body发送给浏览器；
+
+    浏览器收到HTTP响应，从HTTP Body取出HTML文档并显示。
+
+运行WSGI服务  
+
+    # hello.py
+
+    def application(environ, start_response):
+        start_response('200 OK', [('Content-Type', 'text/html')])
+        return [b'<h1>Hello, web!</h1>']
+
+    # server.py
+    # 从wsgiref模块导入:
+    from wsgiref.simple_server import make_server
+    # 导入我们自己编写的application函数:
+    from hello import application
+    
+    # 创建一个服务器，IP地址为空，端口是8000，处理函数是application:
+    httpd = make_server('', 8000, application)
+    print('Serving HTTP on port 8000...')
+    # 开始监听HTTP请求:
+    httpd.serve_forever()
+
+    CMD下输入 python server.py  
+    启动成功后，打开浏览器，输入http://localhost:8000/  
+
+    复杂的Web应用程序，光靠WSGI函数来处理还是太底层，需要在WSGI上再抽象出Web框架，进一步简化Web开发  
+
+**使用Web框架**
+
+WSGI是用一个函数处理一个URL  
+我们需要Web框架来，来处理URL到函数的映射  
+
+**Flask框架**  
+
+    from flask import Flask
+    from flask import request
+    
+    app = Flask(__name__)
+    
+    @app.route('/', methods=['GET', 'POST'])
+    def home():
+        return '<h1>Home</h1>'
+    
+    @app.route('/signin', methods=['GET'])
+    def signin_form():
+        return '''<form action="/signin" method="post">
+                  <p><input name="username"></p>
+                  <p><input name="password" type="password"></p>
+                  <p><button type="submit">Sign In</button></p>
+                  </form>'''
+    
+    @app.route('/signin', methods=['POST'])
+    def signin():
+        # 需要从request对象读取表单内容：
+        if request.form['username']=='admin' and request.form['password']=='password':
+            return '<h3>Hello, admin!</h3>'
+        return '<h3>Bad username or password.</h3>'
+    
+    if __name__ == '__main__':
+        app.run()
+
+Flask通过request.form['name']来获取表单的内容  
+其余的Python Web框架：Django，web.py，Bottle，Tornado
+
+**使用模板**  
+
+![](https://www.liaoxuefeng.com/files/attachments/001400339839622665127663fb840b5870864895b103c2f000)
+MVC：Model-View-Controller “模型-视图-控制器”  
+MVC将Python代码和HTML代码分离,HTML代码全部放到模板里，写起来更有效率。  
+
+    from flask import Flask, request, render_template
+    
+    app = Flask(__name__)
+    
+    @app.route('/', methods=['GET', 'POST'])
+    def home():
+        return render_template('home.html')
+    
+    @app.route('/signin', methods=['GET'])
+    def signin_form():
+        return render_template('form.html')
+    
+    @app.route('/signin', methods=['POST'])
+    def signin():
+        username = request.form['username']
+        password = request.form['password']
+        if username=='admin' and password=='password':
+            return render_template('signin-ok.html', username=username)
+        return render_template('form.html', message='Bad username or password', username=username)
+    
+    if __name__ == '__main__':
+        app.run()
+
+render_template()函数实现模板的渲染。  
+Flask默认支持的模板是jinja2  
+
+html模板  
+
+    <html>
+    <head>
+      <title>Please Sign In</title>
+    </head>
+    <body>
+      {% if message %}
+      <p style="color:red">{{ message }}</p>
+      {% endif %}
+      <form action="/signin" method="post">
+        <legend>Please sign in:</legend>
+        <p><input name="username" placeholder="Username" value="{{ username }}"></p>
+        <p><input name="password" placeholder="Password" type="password"></p>
+        <p><button type="submit">Sign In</button></p>
+      </form>
+    </body>
+    </html>
+
+{{ name }} 表示一个需要替换的变量  
+在jinja2中，用{% ... %}表示指令  
+除了jinja2，常见的模板还有：Mako，Cheetah，Django
+
 ### Changelog  
 
+- 2017/9/2 10:54:41 增加Web开发内容  
 - 2017/8/30 22:24:17 增补高级特征及函数式编程  
 - 2017/8/28 22:01:16 增补字符串，列表内容  
 - 2017/8/27 14:06:52 init  
