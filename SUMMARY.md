@@ -10,6 +10,8 @@
         * [Py2 Py3 difference](doc/py2_py3_difference.md)  
         * [Coding style](doc/Coding_style.md)  
     * [Requests module](doc/Requests_module.md)  
+    * [HTML tutorial](doc/HTML_tutorial)  
+    * [Jinja2 tutorial](doc/Jinja2_tutorial)  
     * [Tkinter package](doc/Tkinter_package.md)  
     * [Cloud deployment](doc/Cloud_deployment.md)  
     * [Wechat development](doc/Wechat_development.md)  
