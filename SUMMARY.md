@@ -8,6 +8,7 @@
     * [Gitbook tutorial](doc/Gitbook_tutorial.md)
     * [Python tutorial](doc/Python_tutorial.md)  
         * [Py2 Py3 difference](doc/py2_py3_difference.md)  
+        * [Virtualenv tutorial](doc/Virtualenv_tutorial.md)
         * [Coding style](doc/Coding_style.md)  
     * [Requests module](doc/Requests_module.md)  
     * [HTML tutorial](doc/HTML_tutorial)  
