@@ -9,6 +9,7 @@
         * [Gitbook tutorial](doc/Gitbook_tutorial.md)
         * [Jupyter notebook tutorial](doc/Jupyter_notebook_tutorial.md)
     * Coding Environment:
+        * [.gitignore tutorial](doc/.gitignore_tutorial.md)
         * [Virtualenv tutorial](doc/Virtualenv_tutorial.md)
     * [Python tutorial](doc/Python_tutorial.md)  
         * [Py2 Py3 difference](doc/py2_py3_difference.md)  
