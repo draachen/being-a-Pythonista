@@ -4,51 +4,50 @@
 
 -   标题
 
-文本前边加\# 或者在下边加==或-  
-*注： # 后要跟空格，以便正确显示* 
+    文本前边加\# 或者在下边加==或-  
+    *注： # 后要跟空格，以便正确显示* 
 
 -   粗体
 
-文本两端加**或__
+    文本两端加**或__
 
 -   分隔线
 
-使用3个以上的星号，减号，底线  
+    使用3个以上的星号，减号，底线  
 
-***
----
-___
 
 -   列表格式
 
-文本前加-，或者1.  
+    文本前加-，或者1.  
 
-- python  
-- java  
-1. python  
-2. java  
+    -   python  
+    -   java
+        1.  python
+        2.  java  
+
 
 -   超链接
 
-This is [an example](http://example.com/ "Title") inline link.    
+    This is [an example](http://example.com/ "Title") inline link.    
 
 -   插入图片
 
-![描述]（www.xxx.com.jpg?raw=true）  
+    ![描述]（www.xxx.com.jpg?raw=true）  
 
 -   引用
 
-文本前加>  
+    文本前加>  
 
-> this is a program.  
+    > this is a program.  
+
 
 -   代码引用
 
-或者使用1个制表符，或4个空格  
+    或者使用1个制表符，或4个空格  
 
     this is a program.   
 
-若多行，则文本两端各加三个单引号'''  
+​	若多行，则文本两端各加三个单引号'''  
 
 -   列表
 
@@ -56,39 +55,38 @@ This is [an example](http://example.com/ "Title") inline link.
 | --------------------------- | ---------------------------- |
 | Content from cell 1         | Content from cell 2          |
 | Content in the first column | Content in the second column |
-*注： MarkdownPad2未正确显示*
+​	注： MarkdownPad2未正确显示*
 
 ### Github Flavored Markdown
 
--   删除线：使用两个~
+-   删除线：使用两个~: ~~I Hate PYTHON~~
 
-~~I Hate PYTHON~~
 
--   任务复选框
-
-使用- [x] 和- [ ] 来  
+-   任务复选框: 使用- [x] 和- [ ] 来  
 
 - [ ] This is a complete item
 - [x] This is a todo item  
 
 -   @某人或Issue  
 
-使用@或#来实现，例如@draachen, # 151  
+    使用@或#来实现，例如@draachen, # 151  
 
 -   添加emoji表情
 
-:sparkles:  :camel:  :boom:  :dragon:  
-*注： MarkdownPad2未正确显示*
+    :sparkles:  :camel:  :boom:  :dragon:  
+    *注： MarkdownPad2未正确显示*
 
 -   HTML标签
 
-HTML区块标签间的Markdown格式语法不会被处理    
+    HTML区块标签间的Markdown格式语法不会被处理    
 
-<table>
-    <tr>
-        <td>Foo</td>
-    </tr>
-</table>  
+    <table>
+
+        <tr>
+            <td>Foo</td>
+        </tr>
+
+    </table>  
 
 ### Markdown Editor: Typora
 
