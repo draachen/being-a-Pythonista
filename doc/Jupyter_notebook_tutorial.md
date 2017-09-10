@@ -60,10 +60,77 @@ Jupyter notebook 在windows下基本无法使用，欲使用jupyter只能通过�
 - 幻灯片制作  
 - 魔术关键字  
 
+### Using LaTeX in Jupyter Notebooks
+
+-   Relationship between LaTex & Jupyter Notebooks
+
+    Jupyter Notebook, rendered w/ MathJax, support using LaTeX to include mathematical notation while writing.
+
+-   Math typesetting basics
+
+    inline mode: use $ 
+
+    ​	$y=mx+b$
+
+    display mode: use $$ 
+    $$
+    P(A\mid B) = \frac{P(B\mid A)P(A)}{{P(B)}}
+    $$
+
+-   Superscript and Subscript
+
+    $x^2$ + $x_i$ +$_{10}C_5$
+
+-   Commands
+
+    Special symbols and formattings are written using commands
+
+    $\sqrt{2\pi}$ + $\frac{a}{b}$
+
+-   Symbols
+
+    written w/ a backslash then the symbol name
+
+    -   Greek letter: $\alpha, \beta, \gamma$
+    -   Operations: $\times, \pm, \oplus$
+    -   Trigonometry functions: $\sin,\tan$ 
+    -   Relations: $\leq, \geq, \approx$
+    -   Triple dots: $\ldots, \ddots$
+    -   Others: $\infty, \nabla, \partial$
+
+-   Accents
+
+    -   Put a hat on it: $\hat x ,\widehat {xbc}$
+    -   For means, put a bar: $\bar x, \overline{abc}$
+    -   Derivatives use dots like: $\dot x, \ddot x$
+    -   Arrows: $\vec{x}, \overrightarrow{xy}$
+
+-   Parentheses, Brackets, Braces
+
+    -   Make parentheses stretchy : $z = \left(\frac{dx}{dy}\right)$
+    -   Special brackets/ braces : |, $\vert, \mid, \left\lgroup\matrix{a & b\cr c & d} \right\rgroup$
+
+-   Typetaces and font options
+
+-   Spaces
+
+    -   use \, \: and \; to add spaces: $\int f(x)\,dx$
+    -   for large spaces: $x, \quad y, \qquad z$
+
+-   Escaping characters
+
+    use backslash to escape from rendering by LaTeX: \{, \[
+
+-   ~~Aligned equations~~
+
+
+
 ### Changelog  
 
-- 170909 init create  
+- 17.09.10 新增Using LaTeX in Jupyter Notebooks
+- 17.09.09 init create  
 
 参考资料  
 
-- [A Primer on Using LaTeX in Jupyter Notebooks](http://data-blog.udacity.com/posts/2016/10/latex-primer/)  
+- [A Primer on Using LaTex in Jupyter Notebooks](http://data-blog.udacity.com/posts/2016/10/latex-primer/)
+- [TEX Commands available in MathJax](http://www.onemathematicalcat.org/MathJaxDocumentation/TeXSyntax.htm)
