@@ -47,7 +47,7 @@
 
     this is a program.   
 
-​	若多行，则文本两端各加三个单引号'''  
+    ​若多行，则文本两端各加三个单引号'''  
 
 -   列表
 
@@ -123,7 +123,7 @@ $$
 
   ​$lim_{x \to \infty} \ exp(-x) = 0$
 
-  ​下标：$H_2 O$ 
+  下标：$H_2 O$ 
 
   ​上标：$y^2 = 4$
 
@@ -156,6 +156,7 @@ def test():
 
 ### Changelog  
 
+- 17.10.01 新增MathJax 参考链接
 - 17.09.10 新增Typora编辑器
 - 2017/8/28 23:42:36 新增Write on Github
 - 2017/8/27 11:29:07 创建
@@ -166,3 +167,4 @@ def test():
 - [Writing on GitHub / Basic writing and formatting syntax ](https://help.github.com/articles/basic-writing-and-formatting-syntax/)  
 - [安利一下Typora：极致简洁的markdown编辑器](http://www.jianshu.com/p/5256ecc06eec)
 - [Typora For Markdown 语法](http://www.jianshu.com/p/092de536d948)
+- [Commands available in MathJax](http://www.onemathematicalcat.org/MathJaxDocumentation/TeXSyntax.htm)
